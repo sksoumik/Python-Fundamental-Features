@@ -1,3 +1,4 @@
+from collections import OrderedDict
 counter = 1
 while counter <= 5:
     print('Control Structures')
@@ -24,4 +25,12 @@ for animal in animal_list:
     for cr in animal:
         creature.append(cr)
 print(creature)
+
+print()
+animal_list = ['cat', 'dog', 'rabbit']   # int object is not iterable
+creature = []
+for animal in animal_list:
+    for cr in animal:
+        creature.append(cr)
+print(''.join(OrderedDict.fromkeys(creature)))
 
